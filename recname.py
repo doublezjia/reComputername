@@ -13,7 +13,7 @@ sn = os.popen("wmic bios get serialnumber").read()
 Cname = base + sn.split()[1]
 
 # 静默激活路径
-kms = r"C:\IT工具\KMSpico\scripts\Silent.cmd"
+kms = r"C:\ITtool\KMSpico\scripts\Silent.cmd"
 # 注册表改名命令列表
 reglist = [
 r'reg add "HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\ComputerName\ActiveComputerName" /v ComputerName /t reg_sz /d {cname} /f'.format(cname=Cname),
